@@ -9,8 +9,11 @@ local final_tab = {}
 -- NOTE: There must be a better way, later check LuaRocks for a package
 local sources = {
     "dc",
+    "dsw",
     "dwciri",
     "owl",
+    "rdf",
+    "sparql",
 }
 
 -- Load all source tables dynamically
