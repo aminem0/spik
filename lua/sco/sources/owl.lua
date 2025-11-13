@@ -104,7 +104,7 @@ return {
 - [rdfs:Class]
 
 + **Subclass relationships**
-- [owl:AnnotationProperty] ⊑ [rdf:Property] ⊑ [rdfs:Resource]
+- [owl:AnnotationProperty] ⊑ [rdf:Property]
 
 + **Definition**
 - The class of annotation properties.
@@ -125,7 +125,7 @@ return {
 - [rdfs:Class]
 
 + **Subclass relationships**
-- [owl:AsymmetricProperty] ⊑ [owl:ObjectProperty] ⊑ [rdf:Property] ⊑ [rdfs:Resource]
+- [owl:AsymmetricProperty] ⊑ [owl:ObjectProperty]
 
 + **Definition**
 - The class of asymmetric properties.
@@ -177,6 +177,7 @@ return {
     {
         label = "owl:DataRange",
         kind = cmp.lsp.CompletionItemKind.Class,
+        deprecated = true,
         description = "owl:DataRange",
         documentation = { -- BUG: REVOIR DEPRECATED
             kind = "markdown",
