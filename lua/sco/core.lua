@@ -34,9 +34,9 @@ function M.setup(opts)
                     insertText = term.insertText or term.label,
                     deprecated = term.deprecated,
                     -- detail = term.description,
-                    kind = term.kind,
+                    -- kind = term.kind,
                     documentation = {
-                        -- kind = term.documentation.kind,
+                        kind = term.documentation.kind,
                         value = term.documentation.value,
                     },
                 })
