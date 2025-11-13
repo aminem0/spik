@@ -1,0 +1,80 @@
+*sparql-completer* Documentation for sparql-completer
+
+=========================================================================================
+Table of contents
+
+=========================================================================================
+Ontologies
+
+There may be slight differences between the original definition on the website
+
+These include:
+
+- Syntactical corrections
+- Addition of rdfs:Class when it was only defined as owl:Class
+- Adding prefixes
+
+These are mostly minor modifications and should not change the original meaning of the text.
+
+However, should any confusion or misdirection come up from these modifications, the responsibility
+is mine and mine alone.
+
+=========================================================================================
+Introduction
+
+This term is like this |haha|
+That term is like that {hoho}
+
+Content negotiation
+RDF concepts
+SPARQL
+
+https://www.w3.org/TR/sparql11-query/
+
+```sparql
+SELECT ?subj ?pred ?obj
+
+WHERE {
+  ?subj ?pred ?obj
+}
+```
+
+
+
+The big THREE ontologies you will need to know are:
+
+RDF
+RDFS
+OWL
+
+
+
+=========================================================================================
+Design choices
+
+The default choice for {Accept} type is */*, this allows the server to determine 
+more often than not, this will lead to RDF/XML.
+
+Therefore, users who want a more human-readable format should should set this value to
+application/sparql-results+json or (if possible) application/ld+json.
+
+The default choice for |Content-Type| is application/sparql-query.
+In the rare case 
+
+
+Rather than rely on a programming language to make the HTTP requests, the terminal tool
+{cURL} is used.
+It should be ubiquitous enough that it does not require any installation.
+A curl command is launched from OOOO.
+
+=========================================================================================
+Division
+
+There are actually three component to a term:
+
+- The label that is shown to the user.
+- The component that is filtered.
+- The component that is inserted.
+
+
+

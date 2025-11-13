@@ -1,0 +1,17 @@
+return {
+    { mime_type = "application/javascript", extension = ".js" },
+    { mime_type = "application/ld+json", extension = ".jsonld" },
+    { mime_type = "application/n-quads", extension = ".nq" },
+    { mime_type = "application/n-triples", extension = ".nt" },
+    { mime_type = "application/rdf+xml", extension = ".rdf" },
+    { mime_type = "application/sparql-results+json", extension = ".json" },
+    { mime_type = "application/sparql-results+xml", extension = ".xml" },
+    { mime_type = "application/trix+xml", extension = ".html" },
+    { mime_type = "application/vnd.ms-excel", extension = ".xlsx" },
+    { mime_type = "application/xhtml+xml", extension = ".xhtml" },
+    { mime_type = "text/csv", extension = ".csv" },
+    { mime_type = "text/html", extension = ".html" },
+    { mime_type = "text/n3", extension = ".n3" },
+    { mime_type = "text/tab-separated-values", extension = ".txt" },
+    { mime_type = "text/turtle", extension = ".ttl" },
+}
