@@ -4,25 +4,35 @@ return {
     {
         label = "dwciri:behavior",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "behavior",
+        description = "dwciri:behavior",
         documentation = {
             kind = "markdown",
             value = [[
 + **Identifier**
 - [http://rs.tdwg.org/dwc/iri/behavior]
 
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [dwc:Occurrence]
+
++ **Range**
+- [xsd:anyURI]
+
 + **Definition**
-- 	A description of the behavior shown by the subject at the time the dwc:Occurrence was recorded.
+- A description of the behavior shown by the subject at the time the [dwc:Occurrence] was recorded.
 
 + **Comments**
-- Recommended best practice is to use a controlled vocabulary. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.
+- Recommended best practice is to use a controlled vocabulary. Terms in the [dwciri:] namespace are intended to be used in RDF with non-literal objects.
 ]],
         },
     },
     {
         label = "dwciri:caste",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "caste",
+        description = "dwciri:caste",
         documentation = {
             kind = "markdown",
             value = [[
@@ -33,14 +43,14 @@ return {
 - Categorisation of individuals for eusocial species (including some mammals and arthropods).
 
 + **Comments**
-- Recommended best practice is to use a controlled vocabulary that aligns best with the dwc:Taxon. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.
+- Recommended best practice is to use a controlled vocabulary that aligns best with the dwc:Taxon. Terms in the [dwciri:] namespace are intended to be used in RDF with non-literal objects.
 ]],
         },
     },
     {
         label = "dwciri:dataGeneralizations",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "dataGeneralizations",
+        description = "dwciri:dataGeneralizations",
         documentation = {
             kind = "markdown",
             value = [[
@@ -58,7 +68,7 @@ return {
     {
         label = "dwciri:degreeOfEstablishment",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "degreeOfEstablishment",
+        description = "dwciri:degreeOfEstablishment",
         documentation = {
             kind = "markdown",
             value = [[
@@ -80,7 +90,7 @@ return {
     {
         label = "dwciri:discipline",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "discipline",
+        description = "dwciri:discipline",
         documentation = {
             kind = "markdown",
             value = [[
@@ -98,7 +108,7 @@ return {
     {
         label = "dwciri:disposition",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "disposition",
+        description = "dwciri:disposition",
         documentation = {
             kind = "markdown",
             value = [[
@@ -116,7 +126,7 @@ return {
     {
         label = "dwciri:earliestGeochronologicalEra",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "earliestGeochronologicalEra",
+        description = "dwciri:earliestGeochronologicalEra",
         documentation = {
             kind = "markdown",
             value = [[
@@ -134,7 +144,7 @@ return {
     {
         label = "dwciri:establishmentMeans",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "establishmentMeans",
+        description = "dwciri:establishmentMeans",
         documentation = {
             kind = "markdown",
             value = [[
@@ -156,7 +166,7 @@ return {
     {
         label = "dwciri:eventType",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "eventType",
+        description = "dwciri:eventType",
         documentation = {
             kind = "markdown",
             value = [[
@@ -174,7 +184,7 @@ return {
     {
         label = "dwciri:fieldNotes",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "fieldNotes",
+        description = "dwciri:fieldNotes",
         documentation = {
             kind = "markdown",
             value = [[
@@ -192,7 +202,7 @@ return {
     {
         label = "dwciri:fieldNumber",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "fieldNumber",
+        description = "dwciri:fieldNumber",
         documentation = {
             kind = "markdown",
             value = [[
@@ -210,7 +220,7 @@ return {
     {
         label = "dwciri:footprintSRS",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "footprintSRS",
+        description = "dwciri:footprintSRS",
         documentation = {
             kind = "markdown",
             value = [[
@@ -228,7 +238,7 @@ return {
     {
         label = "dwciri:footprintWKT",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "footprintWKT",
+        description = "dwciri:footprintWKT",
         documentation = {
             kind = "markdown",
             value = [[
@@ -246,7 +256,7 @@ return {
     {
         label = "dwciri:fromLithostratigraphicUnit",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "fromLithostratigraphicUnit",
+        description = "dwciri:fromLithostratigraphicUnit",
         documentation = {
             kind = "markdown",
             value = [[
@@ -264,7 +274,7 @@ return {
     {
         label = "dwciri:fundingAttribution",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "fundingAttribution",
+        description = "dwciri:fundingAttribution",
         documentation = {
             kind = "markdown",
             value = [[
@@ -282,7 +292,7 @@ return {
     {
         label = "dwciri:geodeticDatum",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "geodeticDatum",
+        description = "dwciri:geodeticDatum",
         documentation = {
             kind = "markdown",
             value = [[
@@ -290,7 +300,7 @@ return {
 - [http://rs.tdwg.org/dwc/iri/geodeticDatum]
 
 + **Definition**
-- The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in dwc:decimalLatitude and dwc:decimalLongitude are based.
+- The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in [dwc:decimalLatitude] and [dwc:decimalLongitude] are based.
 
 + **Comments**
 - Recommended best practice is to use an IRI for the EPSG code of the SRS, if known. Otherwise use a controlled vocabulary for the name or code of the geodetic datum, if known. Otherwise use a controlled vocabulary for the name or code of the ellipsoid, if known. If none of these is known, use an IRI corresponding to the value `not recorded`.
@@ -300,7 +310,7 @@ return {
     {
         label = "dwciri:georeferencedBy",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "georeferencedBy",
+        description = "dwciri:georeferencedBy",
         documentation = {
             kind = "markdown",
             value = [[
@@ -308,7 +318,7 @@ return {
 - [http://rs.tdwg.org/dwc/iri/georeferencedBy]
 
 + **Definition**
-- A person, group, or organization who determined the georeference (spatial representation) for the dcterms:Location.
+- A person, group, or organization who determined the georeference (spatial representation) for the [dcterms:Location].
 
 + **Comments**
 - Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.
@@ -318,7 +328,7 @@ return {
     {
         label = "dwciri:georeferenceProtocol",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "georeferenceProtocol",
+        description = "dwciri:georeferenceProtocol",
         documentation = {
             kind = "markdown",
             value = [[
@@ -329,14 +339,14 @@ return {
 - A description or reference to the methods used to determine the spatial footprint, coordinates, and uncertainties.
 
 + **Comments**
-- Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.
+- Terms in the [dwciri:] namespace are intended to be used in RDF with non-literal objects.
 ]],
         },
     },
     {
         label = "dwciri:georeferenceSources",
         kind = cmp.lsp.CompletionItemKind.Property,
-        description = "georeferenceSources",
+        description = "dwciri:georeferenceSources",
         documentation = {
             kind = "markdown",
             value = [[
@@ -344,7 +354,7 @@ return {
 - [http://rs.tdwg.org/dwc/iri/georeferenceSources]
 
 + **Definition**
-- A map, gazetteer, or other resource used to georeference the dcterms:Location.
+- A map, gazetteer, or other resource used to georeference the [dcterms:Location].
 
 + **Comments**
 - Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.
