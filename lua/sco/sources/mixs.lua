@@ -5,7 +5,8 @@ local cmp = require("cmp")
 
 return {
     {
-        label = "mixs:0000001",
+        label = "mixs:samp_size",
+        insertText = "mixs:0000001",
         kind = cmp.lsp.CompletionItemKind.Property,
         description = "mixs:samp_size",
         deprecated = false,
