@@ -8,9 +8,8 @@ M.options = {
         "eco",
         "http",
         "mixs",
+        "miqe",
         "up",
-
-        "pok",
     },
 
     enable_autocmds = true,
