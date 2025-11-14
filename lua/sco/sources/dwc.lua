@@ -2,29 +2,6 @@ local cmp = require("cmp")
 
 return {
     {
-        label = "dcterms:Location",
-        kind = cmp.lsp.CompletionItemKind.Class,
-        description = "dcterms:Location",
-        documentation = {
-            kind = "markdown",
-            value = [[
-+ **Identifier**
-- [http://purl.org/dc/terms/Location]
-
-+ **Type**
-- [owl:Class]
-- [rdfs:Class]
-
-+ **Definition**
-- A spatial region or named place.
-
-+ **Examples**
-- `the municipality of San Carlos de Bariloche, Río Negro, Argentina`
-- `the place defined by a georeference`
-]],
-        },
-    },
-    {
         label = "dwc:Dataset",
         kind = cmp.lsp.CompletionItemKind.Class,
         deprecated = true,
@@ -199,6 +176,7 @@ return {
 - [http://rs.tdwg.org/dwc/terms/Identification]
 
 + **Type**
+- [owl:Class]
 - [rdfs:Class]
 
 + **Definition**
@@ -607,7 +585,7 @@ return {
 - A group of organisms (sensu [http://purl.obolibrary.org/obo/OBI_0100026]) considered by taxonomists to form a homogeneous unit.
 
 + **Examples**
-- `The genus Truncorotaloides as published by Brönniman et al. in 1953 in the Journal of Paleontology Vol. 27(6) p. 817-820`
+- `the genus Truncorotaloides as published by Brönniman et al. in 1953 in the Journal of Paleontology Vol. 27(6) p. 817-820`
 ]],
         },
     },
