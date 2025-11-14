@@ -2,7 +2,13 @@
 
 A Neovim plugin to help write SPARQL queries more efficiently.
 
+
+I found that the [Wikidata query service](https://query.wikidata.org) was cool, but not intuitive. For some reason, having to type `prefix:` followed by the combination of ``<CTRL + SPACE>`` seemed inefficient for real queries. Furthermore, this suggestion functionality is limited to Wikidata terms. Consequently, researchers will be saddened to find the absence of fan favorites like Darwin Core terms.
+
 I was inspired by the insertion functionality in [YASGUI](https://yasgui.triply.cc), which I found awesome.
+
+
+
 
 This 
 
@@ -23,19 +29,21 @@ return {
 }
 ```
 
-# Dependencies and requirements
+## Dependencies and requirements
 
 HTTP requests are made using [cURL](https://curl.se), so you need to make sure that you have it. However, it is highly likely that you already have it installed.
 
-# Usage
+## Usage
 
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp), the completion engine.
-
 
 
 SPARQL query formatting is done automatically upon writing.
 
 The plugin considers an internal lookup table to define prefixes and namespaces.
+
+In order to avoid fragmentation of vocabularies and possible duplication of terms, terms are indexed by namespace. Consequently, 
+
 
 
 Users are encouraged to consider the following plugins in order to have a better experience:
@@ -46,8 +54,7 @@ Users are encouraged to consider the following plugins in order to have a better
 
 ## Relationship to other projects
 
-This plugin was the origin of [the dwc-owl ontology](https://github.com/aminem0/dwc-owl). I wanted to have a consistent way to query the triples in my triplestore. However, I was 
-
+This plugin was the origin of [the dwc-owl ontology](https://github.com/aminem0/dwc-owl). I wanted to have a consistent way to query the triples in my triplestore. However, I felt that designing an ontology through suggestion terms was a bad way to proceed, so I decided to do it separately.
 
 
 # Contact
