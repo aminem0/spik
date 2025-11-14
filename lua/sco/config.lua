@@ -8,6 +8,7 @@ M.options = {
         "eco",
         "http",
         "mixs",
+        "up",
 
         "pok",
     },
