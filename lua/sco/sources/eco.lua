@@ -35,6 +35,32 @@ return {
         },
     },
     {
+        label = "eco:SurveyTarget",
+        kind = cmp.lsp.CompletionItemKind.Class,
+        description = "eco:SurveyTarget",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/eco/terms/SurveyTarget]
+
++ **Type**
+- [owl:Class]
+- [rdfs:Class]
+
++ **Definition**
+- An intended scope for [dwc:Occurrences] in an [eco:Survey].
+
++ **Examples**
+- `all bird species`
+- `all bird species except *Larus* gulls, fulmars and kittiwakes`
+- `reproductive female *Ctenomys sociabilis* (only)`
+- `*Onchorhynchus mykiss* and *Onchorhynchus clarkii* (only)`
+- `all total lengths except < 12 inches`
+]],
+        },
+    },
+    {
         label = "eco:absentTaxa",
         kind = cmp.lsp.CompletionItemKind.Property,
         description = "eco:absentTaxa",
