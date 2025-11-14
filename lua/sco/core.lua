@@ -51,6 +51,7 @@ local function search(prefix)
     local p = prefix:lower()
 
     for _, term in ipairs(candidates) do
+        -- Make search term lowercase
         local s = term.description:lower()
 
         if s:find(p, 1, true) then
@@ -68,23 +69,22 @@ local function search(prefix)
     return results
 end
 
------------------------------------------------------
--- cmp source definition
------------------------------------------------------
+-- NOTE: nvim-cmp source definition
 local source = {}
 
-function source:get_debug_name()
-    return "sparql_completer"
-end
+-- function source:get_debug_name()
+--     return "sparql_completer"
+-- end
+--
+-- function source:is_available()
+--     return vim.tbl_contains({ "sparql", "rq" }, vim.bo.filetype)
+-- end
+--
+-- function source:get_trigger_characters()
+--     return { ":", "<" } -- after "dc:", "rdf:", "<http"
+-- end
 
-function source:is_available()
-    return vim.tbl_contains({ "sparql", "rq" }, vim.bo.filetype)
-end
-
-function source:get_trigger_characters()
-    return { ":", "<" } -- after "dc:", "rdf:", "<http"
-end
-
+-- NOTE: Define method that nvim-cmp will call for completion items
 function source:complete(params, callback)
     local prefix = params.context.cursor_before_line:match("([%w_:]+)$")
     if not prefix then
@@ -94,23 +94,21 @@ function source:complete(params, callback)
     callback(search(prefix))
 end
 
------------------------------------------------------
--- Public setup()
------------------------------------------------------
+-- NOTE: Public setup
+-- Consider having options later
 function M.setup(opts)
+    -- Call load_vocabularies() to get the terms
     load_vocabularies()
 
+    -- Register sparql_completer as a completion source
     cmp.register_source("sparql_completer", source)
 
+    -- Enable it to work only on .rq or .sparql filetypes
     cmp.setup.filetype({ "sparql", "rq" }, {
         sources = cmp.config.sources({
             { name = "sparql_completer" },
         }),
     })
-
-    if vim.g.sco_debug then
-        vim.notify("SPARQL completion initialized", vim.log.levels.DEBUG)
-    end
 end
 
 return M
