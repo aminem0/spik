@@ -5,6 +5,8 @@ M.options = {
         "dc",
         "dsw",
         "dwc",
+        "eco",
+        "http",
         "mixs",
 
         "pok",

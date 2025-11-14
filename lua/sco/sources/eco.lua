@@ -2,6 +2,39 @@ local cmp = require("cmp")
 
 return {
     {
+        label = "eco:Survey",
+        kind = cmp.lsp.CompletionItemKind.Class,
+        description = "eco:Survey",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/eco/terms/Survey]
+
++ **Type**
+- [owl:Class]
+- [rdfs:Class]
+
++ **Definition**
+- A biotic survey or inventory.
+
++ **Comments**
+- This class includes properties found in the Humboldt Extension to Darwin Core ([eco:] namespace), except for the target scope terms, which can be accomodated for in [eco:SurveyTarget].
+
++ **Examples**
+- `a botanical survey of a protected area to assess native and invasive plant species`
+- `a wetland vegetation mapping`
+- `a camera trap deployment in a rainforest to monitor large mammals`
+- `a frog call survey in wetlands across breeding seasons`
+- `a coverboard survey for reptiles in forested environments`
+- `a pollinator survey in an agricultural landscape`
+- `a macroinvertebrate sampling in a freshwater stream to assess water quality`
+- `a habitat- or ecosystem-level survey (e.g. coral reef health assessment, forest biodiversity assessment)`
+- `an environmental impact assessment (e.g. pre-construction biological baseline survey for a wind farm project)`
+]],
+        },
+    },
+    {
         label = "eco:absentTaxa",
         kind = cmp.lsp.CompletionItemKind.Property,
         description = "eco:absentTaxa",
