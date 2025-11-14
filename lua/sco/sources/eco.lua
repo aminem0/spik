@@ -427,6 +427,7 @@ return {
 
 + **Type**
 - [owl:DatatypeProperty]
+- [rdf:Property]
 
 + **Domain**
 - [eco:Survey]
@@ -1222,7 +1223,7 @@ return {
 - [rdf:Property]
 
 + **Domain**
-- [eco:Survay]
+- [eco:Survey]
 
 + **Range**
 - [xsd:string]
