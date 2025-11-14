@@ -1,6 +1,10 @@
 local M = {}
 
 M.options = {
+    enable_autocmds = true,
+    enable_keymaps = true,
+
+
     auto_add_namespace = true,
     auto_sort_prefixes = true,
     auto_remove_unused_prefixes = true,
