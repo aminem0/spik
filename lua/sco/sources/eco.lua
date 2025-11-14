@@ -53,9 +53,9 @@ return {
 
 + **Examples**
 - `all bird species`
-- `all bird species except <i>Larus</i> gulls, fulmars and kittiwakes`
-- <code>reproductive female <i>Ctenomys sociabilis</i> (only)</code>
-- `*Onchorhynchus mykiss* and *Onchorhynchus clarkii* (only)`
+- `all bird species except Larus gulls, fulmars and kittiwakes`
+- `reproductive female Ctenomys sociabilis (only)`
+- `Onchorhynchus mykiss and Onchorhynchus clarkii (only)`
 - `all total lengths except < 12 inches`
 ]],
         },
@@ -1400,6 +1400,99 @@ return {
 
 + **Examples**
 - `5 sampling sites of 3-5 plots each`
+]],
+        },
+    },
+    {
+        label = "eco:surveyTargetType",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "eco:surveyTargetType",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/eco/terms/surveyTargetType]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [eco:SurveyTarget]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- A scope a [eco:SurveyTarget] describes.
+
++ **Comments**
+- Recommended best practice is to use a controlled vocabulary.
+
++ **Examples**
+- `taxon`
+- `habitat`
+- `establishmenMeans`
+- `growthForm`
+- `sex`
+- `lifeStage`
+- `minimum length`
+]],
+        },
+    },
+    {
+        label = "eco:surveyTargetTypeIRI",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "eco:surveyTargetTypeIRI",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/eco/terms/surveyTargetTypeIRI]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [eco:SurveyTarget]
+
++ **Range**
+- [xsd:anyURI]
+
++ **Definition**
+- An IRI of a controlled vocabulary value for a type of target.
+
++ **Comments**
+- Recommended best practice is to use an IRI for a term in a controlled vocabulary.
+]],
+        },
+    },
+    {
+        label = "eco:surveyTargetTypeSource",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "eco:surveyTargetTypeIRI",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/eco/terms/surveyTargetTypeIRI]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Subproperty relationships**
+- [eco:surveyTargetTypeSource] ⊑ [dcterms:source]
+
++ **Domain**
+- [eco:SurveyTarget]
+
++ **Range**
+- [xsd:anyURI]
+
++ **Definition**
+- A reference to a controlled vocabulary in which the definition of a value in [eco:surveyTargetType] is given.
 ]],
         },
     },
