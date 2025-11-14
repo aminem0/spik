@@ -4,6 +4,7 @@ M.options = {
     sources = {
         "dc",
         "dsw",
+        "mixs",
 
         "pok",
     },
