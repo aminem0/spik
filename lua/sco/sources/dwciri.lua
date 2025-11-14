@@ -1013,4 +1013,23 @@ return {
 ]],
         },
     },
+    {
+        label = "dwciri:PIKA",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "dwciri:PIKA",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/dwc/iri/vitality]
+
++ **Definition**
+- An indication of whether a dwc:Organism was alive or dead at the time of collection or observation.
+
++ **Comments**
+- Recommended best practice is to use a controlled vocabulary. Intended to be used with records having a dwc:basisOfRecord of `PreservedSpecimen`, `MaterialEntity`, `MaterialSample`, or `HumanObservation`. Terms in the dwciri namespace are intended to be used in RDF with non-literal objects.
+]],
+        },
+    },
+
 }
