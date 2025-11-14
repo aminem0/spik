@@ -34,12 +34,6 @@ local function load_vocabularies()
                 index[key] = index[key] or {}
                 table.insert(index[key], term)
             end
-        else
-            -- WARN: Helpful error catch for rewriting
-            -- Tried it out with empty pok table
-            if vim.g.sco_debug then
-                vim.notify("Failed to load vocab source: " .. src, vim.log.levels.WARN)
-            end
         end
     end
 end
