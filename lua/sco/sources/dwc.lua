@@ -236,6 +236,30 @@ return {
         },
     },
     {
+        label = "dwc:MolecularProtocol",
+        kind = cmp.lsp.CompletionItemKind.Class,
+        description = "dwc:MolecularProtocol",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/dwc/terms/MolecularProtocol]
+
++ **Type**
+- [owl:Class]
+- [rdfs:Class]
+
++ **Definition**
+- A protocol used to derive and identify a [dwc:NucleotideSequence] from a [dwc:MaterialEntity].
+
++ **Examples**
+- `a standard DNA barcoding workflow using Sanger sequencing`
+- `a shotgun metagenomics pipeline for microbial community profiling`
+- `a high-thoroughput amplicon sequencing protocol targeting 16S rRNA`
+]],
+        },
+    },
+    {
         label = "dwc:MaterialCitation",
         kind = cmp.lsp.CompletionItemKind.Class,
         description = "dwc:MaterialCitation",
@@ -838,6 +862,39 @@ The full name, with authorship and date information if known, of the currently v
 
 + **Comments**
 - This term is deprecated and should no longer be used.
+]],
+        },
+    },
+    { -- NOTE: Term namespace may change
+        label = "dwc:assayType",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "dwc:assayType",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/dwc/terms/assayType]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [dwc:MolecularProtocol]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- A method used in the study to detect taxon/taxa of interest in the sample.
+
++ **Comments**
+- Recommended best practice is to use a controlled vocabulary.
+
++ **Examples**
+- `targeted`
+- `metabarcoding`
+- `other`
 ]],
         },
     },
