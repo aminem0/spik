@@ -105,6 +105,22 @@ return {
         },
     },
     {
+        label = "dsw:Specimen",
+        kind = cmp.lsp.CompletionItemKind.Class,
+        description = "dsw:Specimen",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://purl.org/dsw/Specimen]
+
++ **Type**
+- [owl:Class]
+- [rdfs:Class]
+]],
+        },
+    },
+    {
         label = "dsw:SpecimenInAlcohol",
         kind = cmp.lsp.CompletionItemKind.Class,
         description = "dsw:SpecimenInAlcohol",
@@ -142,28 +158,6 @@ return {
 
 + **Definition**
 - A form of evidence derived from a [dwc:Organism].
-]],
-        },
-    },
-    {
-        label = "dwc:LivingSpecimen",
-        kind = cmp.lsp.CompletionItemKind.Class,
-        description = "dsw:LivingSpecimen",
-        documentation = {
-            kind = "markdown",
-            value = [[
-+ **Identifier**
-- [http://rs.tdwg.org/dwc/terms/LivingSpecimen]
-
-+ **Type**
-- [owl:Class]
-- [rdfs:Class]
-
-+ **Subclass relationships**
-- [dsw:LivingSpecimen] ⊑ [dwc:Specimen]
-
-+ **Definition**
-- A specimen that is alive.
 ]],
         },
     },

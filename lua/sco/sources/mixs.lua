@@ -418,29 +418,6 @@ return {
         },
     },
      {
-        label = "mixs:depth",
-        insertText = "mixs:0000018",
-        kind = cmp.lsp.CompletionItemKind.Property,
-        description = "mixs:depth",
-        documentation = {
-            kind = "markdown",
-            value = [[
-+ **Identifier**
-- [https://w3id.org/mixs/0000018]
-
-+ **Type**
-- [owl:DatatypeProperty]
-- [rdf:Property]
-
-+ **Range**
-- [xsd:string]
-
-+ **Definition**
-- The vertical distance below local surface. For sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.
-]],
-        },
-    },
-     {
         label = "mixs:subspecf_gen_lin",
         insertText = "mixs:0000020",
         kind = cmp.lsp.CompletionItemKind.Property,
