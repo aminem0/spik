@@ -180,158 +180,64 @@ end
 
 -- Use curl as a job (async). Returns job id.
 -- opts can include: { on_done = function(success, headers, body, http_code) end }
-function M.queryo(opts)
-  opts = opts or {}
-  local endpoint = M.state.sparql_endpoint_url
-  if not endpoint or endpoint == "" then
-    notify("No SPARQL endpoint configured", vim.log.levels.ERROR)
-    return nil
-  end
+function M.queryo()
+    local filepath = vim.fn.expand("%:p")
 
-  local filepath = vim.fn.expand("%:p")
-  if filepath == "" then
-    notify("No buffer file to read SPARQL query from", vim.log.levels.ERROR)
-    return nil
-  end
+    -- Read query contents
+    local query = table.concat(vim.fn.readfile(filepath), "\n")
 
-  local query_lines = vim.fn.readfile(filepath)
-  local query = table.concat(query_lines, "\n")
-
-  -- build curl args as a list to avoid shell injection
-  local args = { "curl", "-i", "-s", "--fail", "-S" }
-
-  -- Accept header
-  table.insert(args, "-H")
-  table.insert(args, "Accept: " .. M.state.accept_mime_type)
-
-  -- Content-Type header for POST (only relevant if POST)
-  if M.state.http_method == "POST" then
-    table.insert(args, "-H")
-    table.insert(args, "Content-Type: " .. M.state.request_content_type)
-    table.insert(args, "-X")
-    table.insert(args, "POST")
-
-    if M.state.request_content_type == "application/x-www-form-urlencoded" then
-      -- use curl to url-encode the form key/value pair
-      -- we put the data as "query=..." using --data-urlencode
-      table.insert(args, "--data-urlencode")
-      table.insert(args, "query=" .. query)
-      table.insert(args, endpoint)
-    else
-      -- send raw SPARQL via stdin to avoid quoting issues
-      -- --data-binary @- reads stdin
-      table.insert(args, "--data-binary")
-      table.insert(args, "@-")
-      table.insert(args, endpoint)
+    -- Handle form-encoded case
+    if request_content_type == "application/x-www-form-urlencoded" then
+        query = "query=" .. query
     end
-  elseif M.state.http_method == "GET" then
-    -- Use curl --get and --data-urlencode to let curl encode properly
-    table.insert(args, "--get")
-    table.insert(args, "--data-urlencode")
-    table.insert(args, "query=" .. query)
-    table.insert(args, endpoint)
-  else
-    notify("Unsupported HTTP method: " .. tostring(M.state.http_method), vim.log.levels.ERROR)
-    return nil
-  end
 
-  if M.state.debug then
-    notify("Running: " .. table.concat(args, " "), vim.log.levels.DEBUG)
-  end
+    local cmd
 
-  -- collect stdout (headers+body) and stderr
-  local stdout_lines = {}
-  local stderr_lines = {}
+    if http_method == "POST" then
+        -- curl reads the query from STDIN (the '@-' argument)
+        cmd = {
+            "curl",
+            "-i",
+            "-s",
+            "-X", "POST",
+            sparql_endpoint_url,
+            "-H", "Content-Type: " .. request_content_type,
+            "-H", "Accept: " .. accept_mime_type,
+            "--data-binary", "@-",
+        }
 
-  -- jobstart accepts list form on unix; pass args as argv
-  local jid = vim.fn.jobstart(args, {
-    stdout_buffered = true,
-    stderr_buffered = true,
-    on_stdout = function(_, data, _)
-      if data then
-        for _, l in ipairs(data) do
-          table.insert(stdout_lines, l)
-        end
-      end
-    end,
-    on_stderr = function(_, data, _)
-      if data then
-        for _, l in ipairs(data) do
-          table.insert(stderr_lines, l)
-        end
-      end
-    end,
-    on_exit = function(_, code, _)
-      -- code == 0 is success (curl might return non-zero on HTTP error because of --fail)
-      local out_str = table.concat(stdout_lines, "\n")
-      -- split headers/body robustly
-      local headers_part, body_part = out_str:match("^(.-)\r\n\r\n(.*)$")
-      if not headers_part then
-        -- try LF-only split
-        headers_part, body_part = out_str:match("^(.-)\n\n(.*)$")
-      end
-      local header_lines = {}
-      if headers_part then
-        for s in headers_part:gmatch("[^\r\n]+") do
-          table.insert(header_lines, s)
-        end
-      end
-      local body_lines = {}
-      if body_part then
-        for s in body_part:gmatch("[^\r\n]+") do
-          table.insert(body_lines, s)
-        end
-      else
-        -- If no split was detected, treat all as body
-        body_lines = vim.split(out_str, "\n")
-      end
+        -- IMPORTANT:
+        -- systemlist(cmd, query) sends `query` as STDIN
+        -- curl reads STDIN because of '@-'
+        response = vim.fn.systemlist(cmd, query)
 
-      -- Find content type
-      local ctype = extract_content_type(header_lines)
-      local ext = mime_to_ext(ctype) or ".txt"
-      local name_base = safe_basename()
-      local body_fname = name_base .. ext
-      local hdr_fname = name_base .. ".http"
+    elseif http_method == "GET" then
+        -- GET uses URL encoding, so no stdin is involved
+        cmd = {
+            "curl",
+            "-i",
+            "-s",
+            sparql_endpoint_url .. "?query=" .. url_encode(query),
+            "-H", "Accept: " .. accept_mime_type,
+        }
 
-      -- Save files
-      local ok_body = pcall(vim.fn.writefile, body_lines, body_fname)
-      local ok_hdr = pcall(vim.fn.writefile, header_lines, hdr_fname)
+        response = vim.fn.systemlist(cmd)
+    end
 
-      if not ok_body or not ok_hdr then
-        notify("Failed to write response files", vim.log.levels.ERROR)
-      end
+    -- Combine response
+    local resp_str = table.concat(response, "\n")
 
-      -- optionally show in floating window (if debug or if caller asked)
-      if M.state.debug or opts.show_window then
-        -- if content-type indicates json, set filetype
-        local ft = nil
-        if ctype and ctype:match("json") then ft = "json"
-        elseif ctype and ctype:match("xml") then ft = "xml"
-        elseif ctype and ctype:match("html") then ft = "html" end
+    -- Split headers and body
+    local resp_headers, resp_body = resp_str:match("(.-)\r\n\r\n(.*)")
+    local resp_headerso = vim.fn.split(resp_headers, "\r\n")
+    local resp_bodyo = vim.fn.split(resp_body, "\n")
 
-        floaty(body_lines, ft)
-      end
+    -- Construct output file base name
+    local name_base = vim.fn.fnamemodify(vim.fn.expand("%"), ":t:r")
 
-      -- call user callback if provided
-      if opts.on_done and type(opts.on_done) == "function" then
-        -- pass success boolean, headers, body as strings/arrays, and exit code
-        local success = (code == 0)
-        pcall(opts.on_done, success, header_lines, body_lines, code)
-      end
-
-      -- notify on error codes
-      if code ~= 0 then
-        local msg = "curl exited with code " .. tostring(code)
-        if #stderr_lines > 0 then
-          msg = msg .. ": " .. table.concat(stderr_lines, " ")
-        end
-        notify(msg, vim.log.levels.ERROR)
-      end
-    end,
-    stdin = (M.state.request_content_type ~= "application/x-www-form-urlencoded" and M.state.http_method == "POST") and query or nil,
-  })
-
-  return jid
+    -- Save output
+    vim.fn.writefile(resp_bodyo, name_base .. mime2ext(contento(resp_headerso)))
+    vim.fn.writefile(resp_headerso, name_base .. ".http")
 end
 
 return M
