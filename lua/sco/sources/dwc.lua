@@ -4971,7 +4971,7 @@ The full name, with authorship and date information if known, of the currently v
 - An identifier for the name usage (documented meaning of the name according to a source) in which the terminal element of the [dwc:scientificName] was originally established under the rules of the associated [dwc:nomenclaturalCode].
 
 + **Comments**
-- This term should be used to refer to the dwc:taxonID of a [dwc:Taxon] record that represents the usage of the terminal element of the [dwc:scientificName] as originally established under the rules of the associated [dwc:nomenclaturalCode]. For example, for names governed by the ICNafp, this term would establish the relationship between a record representing a subsequent combination and the record for its corresponding basionym. Unlike basionyms, however, this term can apply to scientific names at all ranks. For Darwin Core Archives the related record should be present locally in the same archive.
+- This term should be used to refer to the [dwc:taxonID] of a [dwc:Taxon] record that represents the usage of the terminal element of the [dwc:scientificName] as originally established under the rules of the associated [dwc:nomenclaturalCode]. For example, for names governed by the ICNafp, this term would establish the relationship between a record representing a subsequent combination and the record for its corresponding basionym. Unlike basionyms, however, this term can apply to scientific names at all ranks. For Darwin Core Archives the related record should be present locally in the same archive.
 
 + **Examples**
 - `tsn:41107` (ITIS)
@@ -6301,6 +6301,7 @@ The full name, with authorship and date information if known, of the currently v
 
 + **Range**
 - [xsd:anyURI]
+- [xsd:string]
 
 + **Definition**
 - An identifier for the set of [dwc:Taxon] information. May be a global unique identifier or an identifier specific to the data set.
