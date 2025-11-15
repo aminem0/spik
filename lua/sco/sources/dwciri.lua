@@ -1206,20 +1206,4 @@ return {
 ]],
         },
     },
-    {
-        label = "dwciri:PIKA",
-        kind = cmp.lsp.CompletionItemKind.Property,
-        description = "dwciri:PIKA",
-        documentation = {
-            kind = "markdown",
-            value = [[
-+ **Identifier**
-- [http://rs.tdwg.org/dwc/iri/vitality]
-
-+ **Definition**
-- CHU~~~~~~~~.
-]],
-        },
-    },
-
 }
