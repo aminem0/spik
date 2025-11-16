@@ -142,7 +142,7 @@ return {
 - [rdf:Property]
 
 + **Subproperty relationships**
-- [skos:broader] ⊑ [skos:broaderTransitive] ⊑ [skos:semanticRelation]
+- [skos:broader] ⊑ [skos:broaderTransitive]
 
 + **Definition**
 - Relates a concept to a concept that is more general in meaning. By convention, [skos:broader] is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.
@@ -190,8 +190,8 @@ return {
 - [rdf:Property]
 
 + **Subproperty relationships**
-- [skos:broadMatch] ⊑ [skos:broader] ⊑ [skos:broaderTransitive] ⊑ [skos:semanticRelation]
-- [skos:broadMatch] ⊑ [skos:mappingRelation] ⊑ [skos:semanticRelation]
+- [skos:broadMatch] ⊑ [skos:broader]
+- [skos:broadMatch] ⊑ [skos:mappingRelation]
 
 + **Definition**
 - [skos:broadMatch] is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.
@@ -239,7 +239,7 @@ return {
 - [rdf:Property]
 
 + **Subproperty relationships**
-- [skos:closeMatch] ⊑ [skos:mappingRelation] ⊑ [skos:semanticRelation]
+- [skos:closeMatch] ⊑ [skos:mappingRelation]
 
 + **Definition**
 - [skos:closeMatch] is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, [skos:closeMatch] is not declared to be a transitive property.
@@ -310,7 +310,7 @@ return {
 - [rdf:Property]
 
 + **Subproperty relationships**
-- [skos:exactMach] ⊑[skos:closeMatch] ⊑ [skos:mappingRelation] ⊑ [skos:semanticRelation]
+- [skos:exactMach] ⊑ [skos:closeMatch]
 
 + **Definition**
 - [skos:exactMatch] is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. [skos:exactMatch] is a transitive property, and is a sub-property of [skos:closeMatch].
@@ -554,7 +554,7 @@ return {
 - [rdf:Property]
 
 + **Subproperty relationships**
-- [skos:narrower] ⊑ [skos:narrowerTransitive] ⊑ [skos:semanticRelation]
+- [skos:narrower] ⊑ [skos:narrowerTransitive]
 
 + **Definition**
 - Relates a concept to a concept that is more specific in meaning. [skos:scopeNote] "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.
@@ -602,8 +602,8 @@ return {
 - [rdf:Property]
 
 + **Subproperty relationships**
-- [skos:narrowMatch] ⊑ [skos:narrower] ⊑ [skos:narrowerTransitive] ⊑ [skos:semanticRelation]
-- [skos:narrowMatch] ⊑ [skos:mappingRelation] ⊑ [skos:semanticRelation]
+- [skos:narrowMatch] ⊑ [skos:narrower]
+- [skos:narrowMatch] ⊑ [skos:mappingRelation]
 
 + **Definition**
 - [skos:narrowMatch] is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.
@@ -724,8 +724,8 @@ return {
 - [rdf:Property]
 
 + **Subproperty relationships**
-- [skos:relatedMatch] ⊑ [skos:mappingRelation] ⊑ [skos:semanticRelation]
-- [skos:relatedMatch] ⊑ [skos:related] ⊑ [skos:semanticRelation]
+- [skos:relatedMatch] ⊑ [skos:mappingRelation]
+- [skos:relatedMatch] ⊑ [skos:related]
 
 + **Definition**
 - [skos:relatedMatch] is used to state an associative mapping link between two conceptual resources in different concept schemes.
@@ -810,21 +810,6 @@ return {
 
 + **Definition**
 - Relates a concept to the concept scheme that it is a top level concept of.
-]],
-        },
-    },
-    {
-        label = "skos:PIKPIKA",
-        kind = cmp.lsp.CompletionItemKind.Concept,
-        description = "skos:PIKPIKA",
-        documentation = {
-            kind = "markdown",
-            value = [[
-+ **Identifier**
-- [http://www.w3.org/2004/02/skos/core#PIKIPAKA]
-
-+ **Definition**
-- CHUUUUUUUUUUUUUU~~~~~~~~~~~~~~~~~~~~~~~~~``
 ]],
         },
     },
