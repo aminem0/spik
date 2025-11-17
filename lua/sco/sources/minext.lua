@@ -103,10 +103,96 @@ return {
 ]],
         },
     },
+    {
+        label = "minext:aggregateForm",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:aggregateForm",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/aggregateForm]
 
++ **Type**
+- [rdf:Property]
 
++ **Domain**
+- [minext:MaterialAssertion]
 
++ **Range**
+- [xsd:string]
 
++ **Definition**
+- Observable crystal shapes of an assemblage of minerals.
+
++ **Comments**
+- Recommended best practice is to use a controlled vocabulary.
+
++ **Examples**
+- `radial`
+- `botryoidal`
+- `oolithic`
+]],
+        },
+    },
+    {
+        label = "minext:alterationDescription",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:alterationDescription",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/alterationDescription]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- A description of any observed changes in the composition of a mineral brought about by physical or chemical processes related to changes in the physical or chemical environment.
+
++ **Examples**
+- `Dolomitization`
+- `Fenetization`
+- `Rodingitization`
+]],
+        },
+    },
+    {
+        label = "minext:associatedMinerals",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:associatedMinerals",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/associatedMinerals]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- List of secondary minerals associated with a mineral in a specimen.
+
++ **Examples**
+- `calcite`
+- `dolomite`
+- `baryte`
+]],
+        },
+    },
     {
         label = "minext:chemistryRemarks",
         kind = cmp.lsp.CompletionItemKind.Property,
@@ -159,6 +245,66 @@ return {
 + **Examples**
 - `71.02.02a.01`
 - `9.AD.25`
+]],
+        },
+    },
+    {
+        label = "minext:cleavage",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:cleavage",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/cleavage]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- Types of breakages along a plane of weakness, especially those parallel to crystal faces.
+
++ **Examples**
+- `Extraordinary well developped rectangular cleavage`
+]],
+        },
+    },
+    {
+        label = "minext:color",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:color",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/color]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- The intrinsic color of a mineral under natural light.
+
++ **Comments**
+- Here, color is caused by the absorption, or lack of absorption of different wavelengths of natural light by a particular mineral.
+
++ **Examples**
+- `Blue`
+- `green`
+- `red`
+- `iridescent`
 ]],
         },
     },
@@ -324,6 +470,72 @@ return {
         },
     },
     {
+        label = "minext:crystalForm",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:crystalForm",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/crystalForm]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- Geometric shape of a crystal.
+
++ **Comments**
+- Recommended best practice is to use a controlled vocabulary.
+
++ **Examples**
+- `cube`
+- `ditrigonal pyramid`
+- `scalenohedron`
+]],
+        },
+    },
+    {
+        label = "minext:crystalHabit",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:crystalHabit",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/crystalHabit]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- A general term for describing the outward appearance of a mineral.
+
++ **Comments**
+- Recommended best practice is to use a controlled vocabulary. For a given type of crystal, the habit may vary from locality to locality depending on environment of growth.
+
++ **Examples**
+- `isometric`
+- `tabular`
+- `fibrous`
+- `dogtooth`
+- `nailhead`
+]],
+        },
+    },
+    {
         label = "minext:damageRemarks",
         kind = cmp.lsp.CompletionItemKind.Property,
         description = "minext:damageRemarks",
@@ -349,6 +561,35 @@ return {
 - `Due to oxidation and hydration of the pyrite in the coal, the sample has largely decayed to a coal powder with some larger coal pieces`
 - `Some terminations broken off`
 - `Attached label not legible` (or `torn` or `covered`)
+]],
+        },
+    },
+    {
+        label = "minext:exsolutionTexture",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:exsolutionTexture",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/exsolutionTexture]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- A brief description of textures formed by exsolution.
+
++ **Examples**
+- `Ilemenite lamellae in olivine`
+- `Clinopyroxene lamellae around the (100) plane of the orthopyroxene`
+- `Antiperthite exsolution`
 ]],
         },
     },
@@ -532,6 +773,98 @@ return {
 + **Examples**
 - `true`
 - `false`
+]],
+        },
+    },
+    {
+        label = "minext:inclusions",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:inclusions",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/inclusions]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- Short description of any inclusions present within a mineral that includes the phase and physical characteristics.
+
++ **Examples**
+- `Star-shaped rutile needles in quartz`
+- `Needles of tourmaline in quartz (blue quartz)`
+- `Fluid inclusions (liquid bubble and single crystal) in quartz`
+]],
+        },
+    },
+    {
+        label = "minext:luminescence",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:luminescence",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/luminescence]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- The type and nature of light emitted from the mineral upon receiving energy from an external source.
+
++ **Comments**
+- Includes all types of luminescence including fluorescence (all wavelengths) and phosphorescence. Recommended best practice is to use nomenclature in part based on the source of energy, or the trigger for luminescence.
+
++ **Examples**
+- `Green fluorescence`
+- `Pink under short wave UV light`
+]],
+        },
+    },
+    {
+        label = "minext:luster",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:luster",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/luster]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- The reflection of light from the surface of a mineral, described by its quality and intensity.
+
++ **Comments**
+- Recommended best practice is to use a controlled vocabulary.
+
++ **Examples**
+- `Metallic`
+- `Glassy`
+- `Waxy`
 ]],
         },
     },
@@ -1148,6 +1481,35 @@ return {
         },
     },
     {
+        label = "minext:twinningLaw",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "minext:twinningLaw",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/minext/terms/twinningLaw]
+
++ **Type**
+- [rdf:Property]
+
++ **Domain**
+- [minext:MaterialAssertion]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- Short description of any physically discernable twining.
+
++ **Examples**
+- `Dauphiné twinning/Dauphiné Law`
+- `Japan twinning/Japan Law`
+- `Brazil twinning/Brazil Law`
+]],
+        },
+    },
+    {
         label = "minext:verbatimMass",
         kind = cmp.lsp.CompletionItemKind.Property,
         description = "minext:verbatimMass",
@@ -1205,5 +1567,4 @@ return {
 ]],
         },
     },
-
 }
