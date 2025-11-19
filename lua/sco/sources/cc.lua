@@ -128,14 +128,14 @@ return {
 - [http://creativecommons.org/ns#Attribution]
 
 + **Type**
-- [rdfs:Requirement]
+- [cc:Requirement]
 
 + **Definition**
 - Credit be given to copyright holder and/or author.
 ]],
         },
     },
-        {
+    {
         label = "cc:CommercialUse",
         kind = cmp.lsp.CompletionItemKind.Class,
         description = "cc:CommercialUse",
@@ -146,14 +146,14 @@ return {
 - [http://creativecommons.org/ns#CommercialUse]
 
 + **Type**
-- [rdfs:Prohibition]
+- [cc:Prohibition]
 
 + **Definition**
 - Exercising rights for commercial purposes.
 ]],
         },
     },
-        {
+    {
         label = "cc:Copyleft",
         kind = cmp.lsp.CompletionItemKind.Class,
         description = "cc:Copyleft",
@@ -164,7 +164,7 @@ return {
 - [http://creativecommons.org/ns#Copyleft]
 
 + **Type**
-- [rdfs:Requirement]
+- [cc:Requirement]
 
 + **Definition**
 - Derivative and combined works must be licensed under specified terms, similar to those on the original work.
@@ -182,14 +182,14 @@ return {
 - [http://creativecommons.org/ns#DerivativeWork]
 
 + **Type**
-- [rdfs:Permission]
+- [cc:Permission]
 
 + **Definition**
 - Distribution of derivative works.
 ]],
         },
     },
-        {
+    {
         label = "cc:Distribution",
         kind = cmp.lsp.CompletionItemKind.Class,
         description = "cc:Distribution",
@@ -200,7 +200,7 @@ return {
 - [http://creativecommons.org/ns#Distribution]
 
 + **Type**
-- [rdfs:Permission]
+- [cc:Permission]
 
 + **Definition**
 - Distribution, public display, and publicly performance.
@@ -236,14 +236,14 @@ return {
 - [http://creativecommons.org/ns#LesserCopyleft]
 
 + **Type**
-- [rdfs:Requirement]
+- [cc:Requirement]
 
 + **Definition**
 - Derivative works must be licensed under specified terms, with at least the same combinations as the original work; combinations with the work may be licensed under different terms.
 ]],
         },
     },
-{
+    {
         label = "cc:Notice",
         kind = cmp.lsp.CompletionItemKind.Class,
         description = "cc:Notice",
@@ -254,7 +254,7 @@ return {
 - [http://creativecommons.org/ns#Notice]
 
 + **Type**
-- [rdfs:Requirement]
+- [cc:Requirement]
 
 + **Definition**
 - Copyright and license notices be kept intact.
@@ -272,7 +272,7 @@ return {
 - [http://creativecommons.org/ns#Reproduction]
 
 + **Type**
-- [rdfs:Permission]
+- [cc:Permission]
 
 + **Definition**
 - Making multiple copies.
@@ -290,10 +290,7 @@ return {
 - [http://creativecommons.org/ns#ShareAlike]
 
 + **Type**
-- [rdfs:Class]
-
-+ **Subclass relationships**
-- [cc:ShareAlike] ⊑ [cc:Requirement]
+- [cc:Requirement]
 
 + **Definition**
 - Derivative works be licensed under the same terms or compatible terms as the original work.
@@ -311,7 +308,7 @@ return {
 - [http://creativecommons.org/ns#Sharing]
 
 + **Type**
-- [rdfs:Permission]
+- [cc:Permission]
 
 + **Definition**
 - Permits commercial derivatives, but only non-commercial distribution.
@@ -329,10 +326,7 @@ return {
 - [http://creativecommons.org/ns#SourceCode]
 
 + **Type**
-- [rdfs:Class]
-
-+ **Subclass relationships**
-- [cc:SourceCode] ⊑ [cc:Requirement]
+- [cc:Requirement]
 
 + **Definition**
 - Source code (the preferred form for making modifications) must be provided when exercising some rights granted by the license.
@@ -411,7 +405,7 @@ return {
 ]],
         },
     },
-       {
+    {
         label = "cc:jurisdiction",
         kind = cmp.lsp.CompletionItemKind.Property,
         description = "cc:jurisdiction",
@@ -452,14 +446,14 @@ return {
 - [cc:License]
 
 + **Range**
-- [rdf:Resource]
+- [rdfs:Resource]
 
 + **Definition**
 - The URL of the legal text of a [cc:License].
 ]],
         },
     },
-        {
+    {
         label = "cc:license",
         kind = cmp.lsp.CompletionItemKind.Property,
         description = "cc:license",
@@ -507,7 +501,7 @@ return {
 ]],
         },
     },
-        {
+    {
         label = "cc:permits",
         kind = cmp.lsp.CompletionItemKind.Property,
         description = "cc:permits",
@@ -531,7 +525,7 @@ return {
 ]],
         },
     },
-        {
+    {
         label = "cc:prohibits",
         kind = cmp.lsp.CompletionItemKind.Property,
         description = "cc:prohibits",

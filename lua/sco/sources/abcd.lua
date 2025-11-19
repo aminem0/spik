@@ -93,7 +93,6 @@ return {
 
 + **Subclass relationships**
 - [abcd:Organization] ⊑ [abcd:Contact]
-
 + **Definition**
 - Class to describe an organization.
 ]],
@@ -121,6 +120,231 @@ return {
 ]],
         },
     },
+    {
+        label = "abcd:address",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "abcd:address",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/abcd/terms/address]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [abcd:Contact]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- A string representing a postal address.
+]],
+        },
+    },
+    {
+        label = "abcd:emailAddress",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "abcd:emailAddress",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/abcd/terms/emailAddress]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [abcd:Contact]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- An e-mail address of a contact.
+]],
+        },
+    },
+    {
+        label = "abcd:logoURL",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "abcd:logoURL",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/abcd/terms/logoURL]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [abcd:DataSet]
+- [abcd:Organization]
+
++ **Range**
+- [xsd:anyURI]
+
++ **Definition**
+- URL of an icon/logo symbolizing the associated class.
+]],
+        },
+    },
+
+    {
+        label = "abcd:role",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "abcd:role",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/abcd/terms/role]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [abcd:Contact]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- The function a [abcd:Contact] fulfills.
+]],
+        },
+    },
+    {
+        label = "abcd:resourceURI",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "abcd:resourceURI",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/abcd/terms/resourceURI]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [abcd:Accession]
+- [abcd:Assemblage]
+- [abcd:Association]
+- [abcd:Contact]
+- [abcd:DataSet]
+- [abcd:LegalStatement]
+- [abcd:Permit]
+- [abcd:Project]
+- [abcd:Reference]
+- [abcd:Unit]
+
++ **Range**
+- [xsd:anyURI]
+
++ **Definition**
+- A preferably resolvable URI to uniquely identify a concept.
+]],
+        },
+    },
+    {
+        label = "abcd:telephoneNumber",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "abcd:telephoneNumber",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/abcd/terms/telephoneNumber]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [abcd:Contact]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- Full telephone or fax number in standard international format.
+]],
+        },
+    },
+    {
+        label = "abcd:unformattedValue",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "abcd:unformattedValue",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/abcd/terms/unformattedValue]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [abcd:Contact]
+- [abcd:Coordinates]
+- [abcd:Date]
+- [abcd:MeasurementOrFact]
+- [abcd:Version]
+
++ **Range**
+- [xsd:string]
+
++ **Definition**
+- Information about a class in free text-form that can not be expressed in atomized values.
+]],
+        },
+    },
+    {
+        label = "abcd:websiteURL",
+        kind = cmp.lsp.CompletionItemKind.Property,
+        description = "abcd:websiteURL",
+        documentation = {
+            kind = "markdown",
+            value = [[
++ **Identifier**
+- [http://rs.tdwg.org/abcd/terms/websiteURL]
+
++ **Type**
+- [owl:DatatypeProperty]
+- [rdf:Property]
+
++ **Domain**
+- [abcd:Contact]
+- [abcd:DataSet]
+- [abcd:LegalStatement]
+- [abcd:Permit]
+- [abcd:Project]
+- [abcd:Reference]
+- [abcd:Unit]
+
++ **Range**
+- [xsd:anyURI]
+
++ **Definition**
+- The URL of a web page for the associated class.
+]],
+        },
+    },
+
+
+
+
 
 
 }
