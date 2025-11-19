@@ -4,6 +4,7 @@ M.options = {
     sources = {
         "abcd",
         "ac",
+        "cc",
         "dc",
         "dcam",
         "dcmitype",
