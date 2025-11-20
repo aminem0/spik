@@ -795,6 +795,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:acceptedNameUsageID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:Taxon]
 
@@ -863,6 +866,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:acceptedScientificNameID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:Taxon]
 
@@ -921,6 +927,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:AcceptedTaxonID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Taxon]
@@ -986,6 +995,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:acceptedTaxonNameID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Taxon]
@@ -1833,6 +1845,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:digitalSpecimenID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:MaterialEntity]
 
@@ -2191,6 +2206,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:eventID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:Event]
 
@@ -2537,6 +2555,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:fundingAttributionID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:Event]
 
@@ -2667,6 +2688,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:geologicalContextID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:GeologicalContext]
@@ -3023,6 +3047,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:higherGeographyID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dcterms:Location]
 
@@ -3082,6 +3109,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:identificationID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Identification]
@@ -3266,6 +3296,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:identifiedByID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Identification]
@@ -3776,6 +3809,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:locationID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dcterms:Location]
 
@@ -3860,6 +3896,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:materialEntityID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:MaterialEntity]
@@ -3969,6 +4008,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:materialSampleID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:MaterialSample]
@@ -4190,6 +4232,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:measurementID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:MeasurementOrFact]
@@ -4599,6 +4644,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:nameAccordingToID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:Taxon]
 
@@ -4658,6 +4706,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:namePublishedInID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Taxon]
@@ -4752,6 +4803,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:occurrenceID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Occurrence]
@@ -4874,6 +4928,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:organismID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Organism]
@@ -5164,6 +5221,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:parentEventID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:Event]
 
@@ -5225,6 +5285,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:parentNameUsageID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Taxon]
@@ -5460,6 +5523,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:recordedByID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:Occurrence]
 
@@ -5555,6 +5621,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:relatedResourceID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:ResourceRelationship]
@@ -5695,6 +5764,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:relationShipOfResourceID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:ResourceRelationship]
 
@@ -5793,6 +5865,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:resourceID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:ResourceRelationship]
 
@@ -5820,6 +5895,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:resourceRelationshipID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:ResourceRelationship]
@@ -6054,6 +6132,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:scientificNameID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Taxon]
@@ -6404,6 +6485,9 @@ The full name, with authorship and date information if known, of the currently v
 - [owl:DatatypeProperty]
 - [rdf:Property]
 
++ **Subproperty relationships**
+- [dwc:taxonConceptID] ⊑ [dcterms:identifier]
+
 + **Domain**
 - [dwc:Taxon]
 
@@ -6432,6 +6516,9 @@ The full name, with authorship and date information if known, of the currently v
 + **Type**
 - [owl:DatatypeProperty]
 - [rdf:Property]
+
++ **Subproperty relationships**
+- [dwc:taxonID] ⊑ [dcterms:identifier]
 
 + **Domain**
 - [dwc:Taxon]
